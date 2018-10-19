@@ -9,6 +9,8 @@ import Home from '../Home/Home';
 import Contactus from '../Contactus/Contactus';
 // import Courses from '../Courses/Courses';
 import Aboutus from '../Aboutus/Aboutus';
+import Login from '../Login/Login';
+import Signup from '../Signup/Signup';
 
  
 export default class Header extends Component {
@@ -84,6 +86,8 @@ export default class Header extends Component {
                 <Route path="/Contactus" component={Contactus} />
                 {/* <Route path="/Courses" component={Courses} /> */}
                 <Route path="/Aboutus" component={Aboutus} />
+                <Route path="/Login" component={Login}/>
+                <Route path="/Signup" component={Signup}/>
 
             </div>
         );

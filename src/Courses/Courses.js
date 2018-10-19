@@ -1,9 +1,13 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-export default class Courses extends Component {
-    render() {
-        return(
-            <div>Courses</div>
-        );
-    }
+const Courses = (props) => {
+    return  (
+        <div className="courses">
+            <p onClick={props.click}>I'm {props.name} and i'm {props.age} years of old !! </p>
+            <div>{props.children}</div>
+            <input type="text" onChange={props.changed} />
+        </div>
+    )
 }
+
+export default Courses;

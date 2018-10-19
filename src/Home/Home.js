@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import Header from '../Header/Header';
+import Courses from '../Courses/Courses';
+
+import { Button, ButtonToolbar } from 'react-bootstrap';
 
 export default class Home extends Component {
         state = {
@@ -58,16 +60,18 @@ export default class Home extends Component {
         }
         render() {
           return (
-            <div className="App">
+            <div>
                 <h1>Hello {this.state.username}</h1>
-                <button onClick={this.SwitchNameHandler.bind(this, "Jaanu")}>Switch Name</button>
-                <Header name={this.state.person[0].name} age={this.state.person[0].age}></Header>
-                <Header name={this.state.person[1].name} age={this.state.person[1].age} click={this.SwitchNameHandler.bind(this, "Puttu")}>
+                <ButtonToolbar>
+                    <Button bsStyle="primary" onClick={this.SwitchNameHandler.bind(this, "Jaanu")}>Switch Name</Button>
+                </ButtonToolbar>
+                <Courses name={this.state.person[0].name} age={this.state.person[0].age}></Courses>
+                <Courses name={this.state.person[1].name} age={this.state.person[1].age} click={this.SwitchNameHandler.bind(this, "Puttu")}>
                   <h2>
                     Hobbies : Watching TV
                   </h2>
-                </Header>
-                <Header name={this.state.person[2].name} age={this.state.person[2].age} changed={this.nameChangedHandler}></Header>
+                </Courses>
+                <Courses name={this.state.person[2].name} age={this.state.person[2].age} changed={this.nameChangedHandler}> </Courses>
             </div>
           );
         }
